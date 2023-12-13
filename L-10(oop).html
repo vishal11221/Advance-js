@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Programming</title>
+</head>
+<body>
+    
+    <script>
+        class Student{
+
+            square(a){
+               
+                let square;
+                square = a*a;
+                console.log(square);
+            }
+
+            cube(b){
+                
+                let cube;
+                cube = b*b*b;
+                console.log(cube);
+            }
+             
+        }
+        let a = new Student;
+        a.square(5);
+        a.cube(6);
+    </script>
+
+    <script>
+        class Student2 {
+            constructor(name,age){
+                this.studentname = name;
+                this.studentage = age;
+
+                console.log("Constructor Function");
+            }
+
+            hello(){
+                console.log(`Hello ${this.studentname} Your age is ${this.studentage}`);
+            }
+        }
+
+        let a2 = new Student2("Vishal Raj",25);
+        let a3 = new Student2("Rohan",28);
+        let a4 = new Student2("Pankaj",26);
+        let a5 = new Student2("Manish",33);
+
+        a2.hello();
+        a3.hello();
+        a4.hello();
+        a5.hello();
+
+
+    </script>
+</body>
+</html>

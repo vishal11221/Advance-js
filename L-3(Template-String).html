@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template String in Javascript</title>
+</head>
+<body>
+    <p>Template String also known as Template Literals,it is ES6 feature.</p>
+    <p>Template literals (template strings) allow you to use strings or embedded expressions in the form of a string. They are enclosed in backticks `` . </p>
+
+
+    <script>
+         var firstname = "vishal";
+         var lastname = "Raj";
+         
+         document.write(firstname + lastname + "<br>");//Here we concat the two string value with Plus operator,when we have 100 string then we use 100 plus operator and again double court open and close,so we use Template to resolve this.
+
+         //Template string
+
+         var name = "pankaj";
+        
+         document.write(`Hello ${name} good morning have a nice day`);
+    </script>
+
+    <script>
+        var fname = "rohan";
+        var lname = "parsad";
+
+        function f(x,y){
+            return fname + lname;
+
+        }
+        let hello = `Hello ${f(fname,lname)} it time to "wakeup" `;
+        document.write(hello);
+       
+    </script>
+   
+</body>
+</html>

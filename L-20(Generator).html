@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+<body>
+    
+
+    <script>
+     function *f(){
+        console.log("first message");
+        yield 'Hi i am pausing inside code.';
+        console.log("second message");
+        yield 'Hi i am pausing inside code.';
+        console.log("Third message");
+     }
+
+     let g = f();
+    
+     console.log(g.next());
+     console.log(g.next());
+     console.log(g.next());
+    </script>
+</body>
+</html>

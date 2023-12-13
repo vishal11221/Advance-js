@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object literals in javascript</title>
+</head>
+<body>
+    
+    <script>
+        var name = "vishal";
+
+        var obj = {
+            name
+        };
+        console.log(obj);
+
+    </script>
+
+    <script>
+        var name2 = "Student";
+
+        var obj2 = {
+            [name2 + "name"] : "Vishal Raj"
+        };
+        console.log(obj2);
+    </script>
+
+    <script>
+
+        var obj3 = {
+            name : "Vishal Raj",
+            course : "MCA",
+            detail : function(){
+                return `${this.name} is the student of ${this.course}`;
+            }
+        }
+        console.log(obj3);
+        console.log(obj3.detail());
+    </script>
+</body>
+</html>

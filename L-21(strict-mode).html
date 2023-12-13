@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode</title>
+</head>
+<body>
+    
+
+    <script>
+        a = 10;
+        console.log(a);//it not give any syntax error
+    </script>
+
+    <script>
+        "use strict";
+        b = 10;
+        console.log(b);//it get an error b is not defined,because in this code we use strict that strictly say to browser to check any syntax error regarding code.
+    </script>
+</body>
+</html>

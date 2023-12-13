@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await</title>
+</head>
+<body>
+    
+
+    <script>
+        async function f(){
+            return "Hello vishal";
+        }
+
+        f().then((result) =>{
+            console.log(result);
+        })
+
+        // or
+
+        let test = async function(){
+            return "Hi vishal";
+        }
+
+        test().then((result) => {
+            console.log(result);
+        })
+
+        // or with Arrow function
+         
+        let test2 = async () => {
+             return "Welcome Vishal";
+        }
+
+        test2().then((result) => {
+          console.log(result);
+        })
+
+    </script>
+
+    <script>
+        // async with await 
+
+        async function f(){
+            console.log("first data");
+            const data = await fetch("json/studentdata.json");
+            const student = await data.json();
+            console.log(student);
+            console.log("third data");
+        }
+
+        f();
+        console.log("fourth data");
+        console.log("fifth data");
+
+    //it print A,B,D,E then C because of await
+    </script>
+</body>
+</html>

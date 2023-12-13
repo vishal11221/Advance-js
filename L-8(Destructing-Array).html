@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing Array</title>
+</head>
+<body>
+
+
+
+    <script>
+ //Destructing Array:---
+
+        let user = ["vishal","MCA",25];
+
+        let [name,course,age] = user;
+
+        console.log(user);
+        console.log(name);
+        console.log(course);
+        console.log(age);
+    </script>
+
+   <script>
+//Destructing Array with Nested Array:---
+
+let user2 = ["rohan",,27,["Male",10000]];
+
+let [name2,course2 = "BCA",age2,[gender,salary]] = user2;
+
+console.log(user2);
+console.log(name2);
+console.log(course2);
+console.log(age2);
+console.log(gender);
+console.log(salary);
+   </script>
+
+   <script>
+//Destructing Array with Rest parameter:---
+
+let user3 = ["mohan","Btech",24];
+
+let [name3,...args] = user3;
+
+console.log(name3);
+console.log(user3);
+   </script>
+
+   <script>
+//Destructing Array with Function:---
+
+function user4([name4,age4 = 20,city4]){
+  
+    console.log(name4);
+    console.log(age4);
+    console.log(city4);
+}
+user4(["Aryan",,"Motihari"]);//calling the function with Array index value
+   </script>
+
+   <script>
+//Destructing Array with return value:---
+
+function user5(){
+    return ["pankaj",27,"Btech"];
+}
+
+let [name5,age5,city5] = user5();
+
+console.log(name5);
+console.log(age5);
+console.log(city5);
+console.log(user5());
+   </script>
+</body>
+</html>

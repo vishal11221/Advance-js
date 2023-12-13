@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Rest-Parameter</title>
+</head>
+<body>
+    <p>Rest Operator we use when we pass more than one arguments and only we have two parameter.For example:- we have one function in that we pass two parameter but we give 5 arguments for this then rest value where it goes,to handle this situation we use rest operator to handle rest argument value with the help of Rest-Parameter.</p>
+    <p>Note:-Rest Operator always start with end parameter.</p>
+
+    <script>
+        function f(){
+
+            let sum = 0;
+
+            for(let i in arguments){
+                sum += arguments[i];
+            }
+            document.write(sum + "<br>");
+        }
+        f(20,30);
+        f(30,40,50);
+
+        // Rest parameter
+
+        function f2(name,age, ...args){
+
+            document.write(`Hello ${name} ${age} :- `);
+
+            let sum = 0;
+
+            for(let i in args){
+                sum += args[i];
+            }
+            document.write(sum + "<br>"); 
+        }
+        f2("Vishal","Your Age is",20,5);
+        f2("Rohan" ,"Your Age is",20,6);
+    </script>
+</body>
+</html>

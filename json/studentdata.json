@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Vishal Raj",
+        "city": "Motihari",
+        "age": 23
+    },
+
+    {
+        "name": "Rohan",
+        "city": "Bettiah",
+        "age": 24
+    },
+
+    {  
+        "name": "Mohan",
+        "city": "Shivhar",
+        "age": 25
+    }
+]

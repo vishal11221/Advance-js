@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let,Var,Const Keywords in Javascript</title>
+</head>
+<body>
+    <p>In let keyword we not redeclare the value but reassign,it is block scope.</p>
+    <p>Var can be redeclare and reassign,it is global scope.</p>
+    <p>Const cannot be redeclare and reassign,it is block scope.</p>
+
+    <script>
+        var x = "rohan";
+        var x = "vishal";//re-declare x.
+        x = "raj";//reassigning value to x
+        console.log(x);
+        //both are possible only in var keyword.
+
+
+
+        let a = "rohan";
+        // let a = "mohan"; Here we not redeclare a again.because with the help of let keyword we not redeclare
+        a = "sohan";
+        console.log(a);
+
+
+        const b = "rohan";
+        // const b = "pankaj";
+        b = "sohan";
+
+        console.log(b);//it give also error because re-declare and reassign value is not possible with constant keyword.
+    </script>
+</body>
+</html>

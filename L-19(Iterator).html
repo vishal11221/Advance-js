@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterator</title>
+</head>
+<body>
+    
+    <script>
+        // let a = [10,20,30,40];
+
+        // let iter = a[Symbol.iterator]();
+
+        // iter.next();
+        // iter.next();
+        // console.log("Hello");
+        // console.log("Hello");
+        // console.log("Hello");
+        // console.log(iter.next());
+    </script>
+
+    <script>
+        //iterator with Array:--
+        let b = [100,200,300,400];
+        let iter2 = b[Symbol.iterator]();
+
+        let result = iter2.next();
+
+        while(!result.done){
+            console.log(result.value);
+            result = iter2.next();
+        }
+    </script>
+
+    <script>
+        //iterator with string:--
+        let str = "Vishal Raj";
+
+        let iter3 = str[Symbol.iterator]();
+
+        let result2 = iter3.next();
+
+        while(!result2.done){
+            console.log(result2.value);
+            result2 = iter3.next();
+        }
+    </script>
+</body>
+</html>

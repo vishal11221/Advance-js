@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <p>Spread operator convert array value in extra arguments with triple dots as argument.</p>
+    <p>Note:- Spread operator is used only at the time of calling the function and Rest operator is used when we declare the function.</p>
+    
+
+
+    <script>
+         function sum(name,...args){
+
+            console.log(arguments);
+            document.write(`Hello ${name} :`);
+
+            let sum = 0;
+            for(let i in args){
+                sum += args[i];
+            }
+
+            document.write(sum);
+         }
+
+         var arr = [10,20,30];
+         sum('vishal raj',arr);
+    </script>
+</body>
+</html>

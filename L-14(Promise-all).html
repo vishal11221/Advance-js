@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.all()</title>
+</head>
+
+<body>
+    <p>When we have more than one promises in our code then we must use Promise.all() method and pass the promise as an
+        array in this method then it called</p>
+
+
+    <script>
+
+        let complete = true;
+
+        let p1 = new Promise(function (resolve, reject) {
+
+            setTimeout(() => {
+                if (complete) {
+                    console.log("Resolve first, I am running just after 2 seconds");
+                    resolve("first");
+                } else {
+                    reject("Problem not resolved");
+                }
+            }, 2000);
+
+
+        })
+
+        let p2 = new Promise(function (resolve, reject) {
+
+            setTimeout(() => {
+                if (complete) {
+                    console.log("Resolve second, I am running just after 4 seconds");
+                    resolve("second");
+                } else {
+                    reject("Problem not resolved");
+                }
+            }, 4000);
+
+
+        })
+
+        let p3 = new Promise(function (resolve, reject) {
+
+            setTimeout(() => {
+                if (complete) {
+                    console.log("Resolve third, I am running just after 6 seconds");
+                    resolve("Third");
+                } else {
+                    reject("Problem not resolved");
+                }
+            }, 6000);
+
+
+        })
+
+        Promise.all([p1, p2,p3]).then().catch();
+        // console.log(p1);
+        // console.log(p2);
+    </script>
+</body>
+
+</html>

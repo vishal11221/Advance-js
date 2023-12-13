@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol Datatype</title>
+</head>
+<body>
+    
+
+    <script>
+        var x = Symbol("Hello");
+        var y = Symbol("Hello");
+
+       console.log(x===y);//it return false,because when we use symbol datatype for the value it take always different value if the value is same.
+       console.log(typeof x);//symbol
+       console.log(typeof y);//symbol
+    //    alert(x);//it give an error because it is not string value.
+        // alert(x.description);
+
+
+        let age = Symbol();
+
+        let user = {
+            name: "vishal",
+            class: "MCA",
+           [age] : 23
+        }
+
+        for(var i in user){
+            console.log(user[i]);
+        }
+
+        console.log(user);
+        console.log(JSON.stringify(user));//it skip symbol value because it is not and object value.
+    </script>
+</body>
+</html>

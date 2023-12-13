@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Arrow Function</title>
+</head>
+<body>
+
+    <p>Arrow function reduces lots of code and makes the code more readable,it's syntax is too small.For example if you have only one statement then no need of curley braces of function,if you have only one parameter and only one statement then no need of round braces and curley braces.</p>
+    <p>Note:-Rest operator work on rest arguments,we apply for in loop only for rest argument value.</p>
+    
+
+    <script>
+        var f = () =>{
+            console.log("I am Arrow function");
+        }
+        f();
+
+
+        //or
+
+        var a = (fname,lname) =>{
+            return `Hello ${fname} ${lname}`;
+        }
+        console.log(a('Vishal','Raj'));//argument pass to the parameter
+
+        //or
+
+        //when we have only one statement then no need to give curly braces.
+        var welcome = (name,age) => `Hello ${name} - ${age}`;
+        console.log(welcome("vishal",25));
+
+        console.log(typeof welcome);
+
+        //when no of parameter will be one then remove round braces and curly braces also
+
+        var wel = name2 => `Hi ${name2}`
+
+        console.log(wel("prohit"));
+    </script>
+</body>
+</html>
